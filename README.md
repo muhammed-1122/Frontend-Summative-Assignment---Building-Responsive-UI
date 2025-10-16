@@ -75,21 +75,3 @@ If the "Last 7 Days Spending" chart does not appear after adding transactions:
 Check Dates: Ensure you have added expenses dated within the last 7 calendar days.
 
 Verify Console: Open your browser's developer console (F12) for any JavaScript errors related to Chart.js. (The current script uses Chart.js correctly, so data input is the most likely issue.)
-
-📄 File Structure
-
-File
-
-Purpose
-
-index.html
-
-The main application shell and all page content definitions.
-
-style.css
-
-All CSS rules and utility classes for layout and aesthetics.
-
-script.js
-
-Contains all application logic, state management, navigation, data processing, and Chart.js initialization.
