@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penniwise - Student Budget Buddy</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="app-body">
+    <a href="#main-content-start" class="skip-link">Skip to content</a>
+
+    <header class="header" role="banner">
+      <div class="container px-4 py-3">
+        <div class="header-content">
+          <div class="logo">
+            <i
+              data-feather="dollar-sign"
+              class="w-6 h-6"
+              aria-hidden="true"
+            ></i>
+            <h1 class="text-xl font-bold">Penniwise</h1>
+          </div>
+
+          <button
+            id="mobile-menu-button"
+            class="mobile-menu-button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="sr-only">Toggle navigation menu</span>
+            <i data-feather="menu" class="w-6 h-6" aria-hidden="true"></i>
+          </button>
+
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <ul class="nav-list">
+              <li>
+                <a
+                  href="#"
+                  class="nav-link active"
+                  data-page="dashboard"
+                  aria-current="page"
+                  >Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link" data-page="records">Records</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link" data-page="add">Add Transaction</a>
+              </li>
+              <li>
+                <a href="#" class="nav-link" data-page="settings">Settings</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <nav
+        id="mobile-menu"
+        class="mobile-nav hidden"
+        aria-label="Mobile Navigation"
+      >
+        <ul class="mobile-nav-list">
+          <li>
+            <a
+              href="#"
+              class="mobile-nav-link active"
+              data-page="dashboard"
+              aria-current="page"
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="#" class="mobile-nav-link" data-page="records">Records</a>
+          </li>
+          <li>
+            <a href="#" class="mobile-nav-link" data-page="add"
+              >Add Transaction</a
+            >
+          </li>
+          <li>
+            <a href="#" class="mobile-nav-link" data-page="settings"
+              >Settings</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="main-content" role="main">
+      <span id="main-content-start" aria-hidden="true"></span>
+
+      <section id="dashboard-page" class="page-content">
+        <h2 class="page-title">Finance Dashboard</h2>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="flex items-center">
+              <div class="stat-icon-indigo">
+                <i
+                  data-feather="dollar-sign"
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div>
+                <p class="stat-label">Total Balance</p>
+                <h3 class="stat-value" id="total-balance">$0.00</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="flex items-center">
+              <div class="stat-icon-green">
+                <i
+                  data-feather="trending-up"
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div>
+                <p class="stat-label">Income</p>
+                <h3 class="stat-value" id="total-income">$0.00</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="flex items-center">
+              <div class="stat-icon-red">
+                <i
+                  data-feather="trending-down"
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <div>
+                <p class="stat-label">Expenses</p>
+                <h3 class="stat-value" id="total-expenses">$0.00</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="flex items-center">
+              <div class="stat-icon-yellow">
+                <i data-feather="target" class="w-5 h-5" aria-hidden="true"></i>
+              </div>
+              <div>
+                <p class="stat-label">Budget Left</p>
+                <h3 class="stat-value" id="budget-left">$0.00</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="budget-progress-card">
+          <div class="budget-progress-header">
+            <h3 class="card-title">Monthly Budget Progress</h3>
+            <span id="budget-percentage" class="budget-percentage">0%</span>
+          </div>
+          <div
+            class="progress-bar-container"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div
+              id="budget-progress"
+              class="progress-bar"
+              style="width: 0%"
+            ></div>
+          </div>
+          <div class="budget-progress-footer">
+            <span class="budget-info-text"
+              >Spent: $<span id="budget-spent">0.00</span></span
+            >
+            <span class="budget-info-text"
+              >Budget: $<span id="budget-total">0.00</span></span
+            >
+          </div>
+        </div>
+
+        <div class="spending-chart-card">
+          <h3 class="card-title mb-4">Last 7 Days Spending</h3>
+
+          <div
+            class="weekly-chart"
+            id="weekly-chart"
+            role="img"
+            aria-label="Last 7 Days Spending Chart"
+          >
+            <canvas id="weekly-chart-canvas"></canvas>
+          </div>
+        </div>
+
+        <div class="categories-card">
+          <h3 class="card-title mb-4">Spending by Category</h3>
+          <div class="categories-grid" id="categories-list">
+            <div class="category-item-placeholder">
+              <div class="category-color-placeholder bg-indigo-500"></div>
+              <span>Food</span>
+              <span class="font-medium">$0.00</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="records-page" class="page-content hidden">
+        <div class="page-header-records">
+          <h2 class="page-title">Transaction Records</h2>
+          <button id="export-btn" class="button-primary button-icon">
+            <i
+              data-feather="download"
+              class="w-4 h-4 mr-2"
+              aria-hidden="true"
+            ></i>
+            Export
+          </button>
+        </div>
+
+        <div class="filters-card" role="search">
+          <div class="filters-container">
+            <div class="flex-grow">
+              <label for="search-input" class="input-label">Search</label>
+              <div class="input-with-button-container">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search transactions..."
+                  class="input-text"
+                />
+                <button
+                  id="clear-search"
+                  class="input-clear-button"
+                  aria-label="Clear search input"
+                >
+                  <i data-feather="x" class="w-5 h-5" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div>
+              <label for="category-filter" class="input-label">Category</label>
+              <select id="category-filter" class="input-select">
+                <option value="">All Categories</option>
+                <option value="Food">Food</option>
+                <option value="Books">Books</option>
+                <option value="Transport">Transport</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Fees">Fees</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="date-filter" class="input-label">Date Range</label>
+              <select id="date-filter" class="input-select">
+                <option value="all">All Time</option>
+                <option value="week">This Week</option>
+                <option value="month">This Month</option>
+                <option value="year">This Year</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="records-container">
+          <table class="records-table">
+            <thead class="records-table-head">
+              <tr>
+                <th
+                  scope="col"
+                  class="table-header sort-header"
+                  data-sort="date"
+                  aria-sort="descending"
+                >
+                  Date
+                  <i
+                    data-feather="chevron-down"
+                    class="sort-icon"
+                    aria-hidden="true"
+                  ></i>
+                </th>
+                <th
+                  scope="col"
+                  class="table-header sort-header"
+                  data-sort="description"
+                  aria-sort="none"
+                >
+                  Description
+                  <i
+                    data-feather="chevron-down"
+                    class="sort-icon"
+                    aria-hidden="true"
+                  ></i>
+                </th>
+                <th
+                  scope="col"
+                  class="table-header sort-header"
+                  data-sort="amount"
+                  aria-sort="none"
+                >
+                  Amount
+                  <i
+                    data-feather="chevron-down"
+                    class="sort-icon"
+                    aria-hidden="true"
+                  ></i>
+                </th>
+                <th
+                  scope="col"
+                  class="table-header sort-header"
+                  data-sort="category"
+                  aria-sort="none"
+                >
+                  Category
+                  <i
+                    data-feather="chevron-down"
+                    class="sort-icon"
+                    aria-hidden="true"
+                  ></i>
+                </th>
+                <th scope="col" class="table-header table-header-actions">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody class="records-table-body" id="records-table-body"></tbody>
+          </table>
+
+          <div class="records-cards-container" id="records-cards"></div>
+
+          <div id="empty-state" class="empty-state hidden">
+            <i
+              data-feather="frown"
+              class="empty-state-icon"
+              aria-hidden="true"
+            ></i>
+            <h3 class="empty-state-title">No transactions found</h3>
+            <p class="empty-state-text">
+              Try adjusting your search or add a new transaction.
+            </p>
+            <button class="button-primary empty-state-button" data-page="add">
+              Add Transaction
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="add-page" class="page-content hidden">
+        <h2 class="page-title">Add Transaction</h2>
+
+        <form
+          id="transaction-form"
+          class="form-card"
+          aria-label="Add Transaction Form"
+        >
+          <input type="hidden" id="record-id" value="" />
+
+          <div class="form-sections">
+            <div>
+              <label for="description" class="input-label">Description</label>
+              <input type="text" id="description" class="input-text" required />
+              <p id="description-error" class="form-error-message hidden">
+                Please enter a valid description without leading/trailing
+                spaces.
+              </p>
+            </div>
+
+            <div>
+              <label for="amount" class="input-label">Amount</label>
+              <div class="input-amount-container">
+                <div class="input-amount-prefix">
+                  <span aria-hidden="true">$</span>
+                </div>
+                <input
+                  type="text"
+                  id="amount"
+                  class="input-text input-amount-field"
+                  placeholder="0.00"
+                  required
+                />
+                <div class="input-amount-suffix">
+                  <label for="type" class="sr-only">Type</label>
+                  <select id="type" class="input-amount-select">
+                    <option value="expense">Expense</option>
+                    <option value="income">Income</option>
+                  </select>
+                </div>
+              </div>
+              <p id="amount-error" class="form-error-message hidden">
+                Please enter a valid amount with up to 2 decimal places.
+              </p>
+            </div>
+
+            <div>
+              <label for="category" class="input-label">Category</label>
+              <div class="input-flex-group">
+                <select id="category" class="input-select-group-left">
+                  <option value="Food">Food</option>
+                  <option value="Books">Books</option>
+                  <option value="Transport">Transport</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Fees">Fees</option>
+                  <option value="Other">Other</option>
+                </select>
+                <button
+                  type="button"
+                  id="add-category-btn"
+                  class="button-secondary-group-right"
+                >
+                  <i data-feather="plus" class="w-4 h-4" aria-hidden="true"></i>
+                </button>
+              </div>
+              <p id="category-error" class="form-error-message hidden">
+                Please enter a valid category name.
+              </p>
+            </div>
+
+            <div>
+              <label for="date" class="input-label">Date</label>
+              <input type="date" id="date" class="input-text" required />
+              <p id="date-error" class="form-error-message hidden">
+                Please enter a valid date.
+              </p>
+            </div>
+
+            <div>
+              <label for="notes" class="input-label">Notes (Optional)</label>
+              <textarea id="notes" rows="3" class="input-textarea"></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button
+                type="button"
+                class="button-secondary"
+                data-page="records"
+              >
+                Cancel
+              </button>
+              <button type="submit" class="button-primary">
+                Save Transaction
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <section id="settings-page" class="page-content hidden">
+        <h2 class="page-title">Settings</h2>
+
+        <div class="settings-card">
+          <div class="settings-sections">
+            <div class="settings-section">
+              <h3 class="settings-subtitle">Categories</h3>
+              <div class="space-y-4">
+                <div id="categories-container" class="category-tags-container">
+                  <div
+                    class="category-tag category-tag-deletable"
+                    data-category="Food"
+                  >
+                    <span>Food</span>
+                    <button
+                      type="button"
+                      class="category-tag-delete-btn"
+                      aria-label="Remove Food category"
+                    >
+                      <i
+                        data-feather="x"
+                        class="w-4 h-4"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="input-flex-group">
+                  <input
+                    type="text"
+                    id="new-category"
+                    placeholder="New category"
+                    class="input-text-group-left"
+                  />
+                  <button
+                    type="button"
+                    id="add-category"
+                    class="button-primary-group-right"
+                  >
+                    Add
+                  </button>
+                </div>
+                <p
+                  id="category-settings-error"
+                  class="form-error-message hidden"
+                >
+                  Category name is invalid.
+                </p>
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <h3 class="settings-subtitle">Monthly Budget</h3>
+              <div class="flex items-center">
+                <div class="input-amount-container-settings">
+                  <div class="input-amount-prefix">
+                    <span aria-hidden="true">$</span>
+                  </div>
+                  <input
+                    type="text"
+                    id="monthly-budget"
+                    class="input-text input-amount-field-settings"
+                    placeholder="0.00"
+                  />
+                  <div class="input-amount-suffix-text">
+                    <span aria-hidden="true">USD</span>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  id="save-budget"
+                  class="button-primary ml-4"
+                >
+                  Save
+                </button>
+              </div>
+              <p id="budget-error" class="form-error-message hidden">
+                Please enter a valid budget amount.
+              </p>
+            </div>
+
+            <div class="settings-section">
+              <h3 class="settings-subtitle">Currency</h3>
+              <div class="currency-grid">
+                <div>
+                  <label for="base-currency" class="input-label"
+                    >Base Currency</label
+                  >
+                  <select id="base-currency" class="input-select">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="currency-1" class="input-label"
+                    >Secondary Currency 1</label
+                  >
+                  <select id="currency-1" class="input-select">
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="currency-2" class="input-label"
+                    >Secondary Currency 2</label
+                  >
+                  <select id="currency-2" class="input-select">
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mt-4">
+                <button type="button" id="save-currency" class="button-primary">
+                  Save Currency Settings
+                </button>
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <h3 class="settings-subtitle">Data Management</h3>
+              <div class="space-y-4">
+                <div>
+                  <button
+                    type="button"
+                    id="export-data"
+                    class="button-success button-icon data-management-button"
+                  >
+                    <i
+                      data-feather="download"
+                      class="w-4 h-4 mr-2"
+                      aria-hidden="true"
+                    ></i>
+                    Export Data
+                  </button>
+                </div>
+                <div>
+                  <label for="import-data" class="input-label mb-2"
+                    >Import Data</label
+                  >
+                  <input
+                    type="file"
+                    id="import-data"
+                    class="input-file"
+                    accept=".json"
+                  />
+                  <button
+                    type="button"
+                    id="import-btn"
+                    class="button-primary mt-2"
+                  >
+                    Import
+                  </button>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    id="reset-data"
+                    class="button-danger data-management-button"
+                  >
+                    Reset All Data
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container px-4">
+        <div class="footer-content">
+          <div class="mb-4 md:mb-0">
+            <p class="text-sm text-gray-500">
+              &copy; 2023 Penniwise. All rights reserved.
+            </p>
+          </div>
+          <div class="footer-links" aria-label="Social and Information Links">
+            <a href="#" class="footer-icon-link" aria-label="GitHub Repository">
+              <i data-feather="github" class="w-5 h-5" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="footer-icon-link" aria-label="Contact Email">
+              <i data-feather="mail" class="w-5 h-5" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="footer-icon-link" aria-label="About Penniwise">
+              <i data-feather="info" class="w-5 h-5" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="confirmation-modal"
+      class="modal-backdrop hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal-content">
+        <div class="flex items-center mb-4">
+          <div class="modal-icon-red">
+            <i
+              data-feather="alert-triangle"
+              class="w-5 h-5"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <h3 class="modal-title" id="modal-title">Confirm Action</h3>
+        </div>
+        <p class="modal-message" id="modal-message">
+          Are you sure you want to perform this action?
+        </p>
+        <div class="modal-actions">
+          <button type="button" id="modal-cancel-btn" class="button-secondary">
+            Cancel
+          </button>
+          <button type="button" id="modal-confirm-btn" class="button-danger">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="status-notification"
+      class="status-notification hidden"
+      aria-live="polite"
+    >
+      <div class="notification-content notification-success">
+        <i
+          data-feather="check-circle"
+          class="w-5 h-5 mr-2"
+          aria-hidden="true"
+        ></i>
+        <span id="notification-message">Action completed successfully</span>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"
+      defer
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
