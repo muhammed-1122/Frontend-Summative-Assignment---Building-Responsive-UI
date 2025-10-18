@@ -1,77 +1,53 @@
-💰 Penniwise: Student Budget Buddy
+Penniwise - Student Budget Buddy
 
-Penniwise is a lightweight, single-page application (SPA) designed to help students track income, manage expenses, and stick to a monthly budget. It provides a clean dashboard view of key financial metrics and a dedicated section for filtering, sorting, and managing all transaction records.
+Penniwise is a responsive, client-side web application designed to help students manage their finances effectively. It provides a simple, intuitive interface for tracking income and expenses, setting budgets, and visualizing spending habits through an interactive dashboard. All data is stored locally in the browser, ensuring user privacy.
 
-✨ Features
+Key Features
 
-Dashboard Overview
+Interactive Dashboard: Get an at-a-glance overview of your total balance, income, expenses, and budget progress.
 
-Key Financial Stats: Instantly view Total Balance, Income, and Expenses.
+Visual Charts: Analyze your spending with a 7-day bar chart and a category-based doughnut chart.
 
-Budget Tracking: Monitor Monthly Budget Progress, including a visual progress bar and remaining budget calculation.
+Multi-Currency Support: Log transactions in Rwandan Francs (RWF), US Dollars (USD), or Nigerian Naira (NGN), with automatic conversion to your chosen base currency.
 
-Visual Spending Chart: A weekly bar chart (powered by Chart.js) dynamically visualizes spending over the last seven days.
+Custom Categories: Organize your spending by adding, removing, and managing custom categories to fit your lifestyle.
 
-Category Breakdown: See a quick summary of expenses grouped by category.
+Advanced Filtering & Sorting: Easily search, filter, and sort your transaction records by date, description, amount, or category.
 
-Transaction Management
+Light & Dark Mode: A sleek, modern interface that supports both light and dark themes based on your preference.
 
-Add/Edit Transactions: Easily input new income or expense records, including amount, type, category, and date.
+Fully Responsive: A mobile-first design that works beautifully on desktops, tablets, and smartphones.
 
-Records Table: View all transactions in a sortable, filterable table view.
+Data Management: Export your transaction records to a .csv file or back up/import your entire application data using a .json file.
 
-Filtering: Filter records by Category, Date Range (Week, Month, Year, All Time), and Search Term.
+Tech Stack
 
-Sorting: Sort records by Date, Amount, Description, or Category.
-
-Settings & Data
-
-Custom Categories: Add or remove custom expense categories (default categories are protected).
-
-Monthly Budget Goal: Set and adjust the monthly spending limit.
-
-Currency: Select the base currency for display.
-
-Data Management: Securely Export the transaction data as a .json file for backup or a .csv file for external analysis, or Reset All Data.
-
-🛠️ Technology Stack
-
-Penniwise is built entirely using vanilla frontend technologies:
-
-HTML5: Semantic structure and organization.
-
-CSS3: Styling based on a utility-first approach (simulating Tailwind CSS styles internally).
-
-JavaScript (ES6+): Application logic, state management, and DOM manipulation.
+Frontend: HTML5, CSS3, JavaScript (ES6+)
 
 Libraries:
 
-Chart.js: Used for rendering the responsive "Last 7 Days Spending" bar chart.
+Chart.js for data visualization.
 
-Feather Icons: Lightweight SVG icons used throughout the interface.
+Feather Icons for clean and simple SVG icons.
 
-State Management: Data is persisted using the browser's Local Storage.
+File Structure
 
-🚀 How to Run Locally
+penniwise-budget-app/
+│
+├── 📄 index.html        # Main application file with all pages (Dashboard, Records, etc.)
+├── 📄 style.css         # All styles for the main application
+├── 📄 script.js         # Core application logic, state management, and interactivity
+├── 📄 about.html        # Static "About" page with project details
+├── 📄 README.md         # Project documentation (this file)
+└── 📄 text.json         # Dummy data for demonstration and import testing
 
-Since Penniwise is a single-page HTML application with no server-side dependencies, setup is quick:
-
-Clone the Repository (or download the files): (Assumes you have the index.html, style.css, and script.js files.)
-
-Open the HTML File: Navigate to the project directory and open the index.html file directly in any modern web browser (e.g., Chrome, Firefox).
-
-💡 Usage Guide
 
 Getting Started
 
-Add your first transaction: Click the "Add Transaction" link in the navigation or on the dashboard. Enter a description, amount, select "Income" or "Expense," and a date.
+This is a fully client-side application with no server-side dependencies. To run it, simply:
 
-Set a Monthly Budget: Navigate to the "Settings" page to set your target monthly spending amount.
+Clone or download the repository.
 
-Troubleshooting the Chart
+Open the index.html file in your favorite web browser.
 
-If the "Last 7 Days Spending" chart does not appear after adding transactions:
-
-Check Dates: Ensure you have added expenses dated within the last 7 calendar days.
-
-Verify Console: Open your browser's developer console (F12) for any JavaScript errors related to Chart.js. (The current script uses Chart.js correctly, so data input is the most likely issue.)
+That's it!.
