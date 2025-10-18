@@ -1,0 +1,525 @@
+{
+  "transactions": [
+    {
+      "id": "1728886800001",
+      "description": "Monthly Salary",
+      "amount": 750000.0,
+      "currency": "RWF",
+      "type": "income",
+      "category": "Other",
+      "date": "2025-10-01",
+      "notes": "October pay"
+    },
+    {
+      "id": "1728886800002",
+      "description": "Weekly Groceries",
+      "amount": 45000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Groceries",
+      "date": "2025-10-02",
+      "notes": "Milk, eggs, bread"
+    },
+    {
+      "id": "1728886800003",
+      "description": "Netflix Subscription",
+      "amount": 15.99,
+      "currency": "USD",
+      "type": "expense",
+      "category": "Subscription",
+      "date": "2025-10-03",
+      "notes": ""
+    },
+    {
+      "id": "1728886800004",
+      "description": "Bus Fare",
+      "amount": 1000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Transport",
+      "date": "2025-10-03",
+      "notes": "To/from campus"
+    },
+    {
+      "id": "1728886800005",
+      "description": "Data Structures Textbook",
+      "amount": 45.5,
+      "currency": "USD",
+      "type": "expense",
+      "category": "Books",
+      "date": "2025-10-04",
+      "notes": "Required for class"
+    },
+    {
+      "id": "1728886800006",
+      "description": "Dinner with Friends",
+      "amount": 18000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Food",
+      "date": "2025-10-05",
+      "notes": "Pizza night"
+    },
+    {
+      "id": "1728886800007",
+      "description": "Movie Tickets",
+      "amount": 10000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Entertainment",
+      "date": "2025-10-06",
+      "notes": ""
+    },
+    {
+      "id": "1728886800008",
+      "description": "Freelance Project Payment",
+      "amount": 150.0,
+      "currency": "USD",
+      "type": "income",
+      "category": "Other",
+      "date": "2025-10-07",
+      "notes": "Web design work"
+    },
+    {
+      "id": "1728886800009",
+      "description": "Tuition Fee Installment",
+      "amount": 250000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Fees",
+      "date": "2025-10-10",
+      "notes": "First installment"
+    },
+    {
+      "id": "1728886800100",
+      "description": "Flight Ticket Home",
+      "amount": 150000.0,
+      "currency": "NGN",
+      "type": "expense",
+      "category": "Transport",
+      "date": "2025-10-11",
+      "notes": "Holiday travel"
+    },
+    {
+      "id": "1728886800101",
+      "description": "Coffee Shop",
+      "amount": 3500.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Food",
+      "date": "2025-10-12",
+      "notes": "Study session"
+    },
+    {
+      "id": "1728886800102",
+      "description": "Spotify Premium",
+      "amount": 950.0,
+      "currency": "NGN",
+      "type": "expense",
+      "category": "Subscription",
+      "date": "2025-10-14",
+      "notes": ""
+    },
+    {
+      "id": "1728886800103",
+      "description": "Weekly Groceries",
+      "amount": 38000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Groceries",
+      "date": "2025-10-15",
+      "notes": "Restock"
+    },
+    {
+      "id": "1728886800104",
+      "description": "Lunch at Cafeteria",
+      "amount": 4000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Food",
+      "date": "2025-10-16",
+      "notes": ""
+    },
+    {
+      "id": "1728886800105",
+      "description": "Bus Fare",
+      "amount": 1000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Transport",
+      "date": "2025-10-17",
+      "notes": ""
+    },
+    {
+      "id": "1726266000001",
+      "description": "Monthly Salary",
+      "amount": 750000.0,
+      "currency": "RWF",
+      "type": "income",
+      "category": "Other",
+      "date": "2025-09-01",
+      "notes": "September pay"
+    },
+    {
+      "id": "1726266000002",
+      "description": "Semester Startup Books",
+      "amount": 120.0,
+      "currency": "USD",
+      "type": "expense",
+      "category": "Books",
+      "date": "2025-09-05",
+      "notes": "All books for the sem"
+    },
+    {
+      "id": "1726266000003",
+      "description": "Gift from Home",
+      "amount": 50000.0,
+      "currency": "NGN",
+      "type": "income",
+      "category": "Other",
+      "date": "2025-09-10",
+      "notes": "Thanks!"
+    },
+    {
+      "id": "1726266000004",
+      "description": "New Notebooks",
+      "amount": 12000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Books",
+      "date": "2025-09-15",
+      "notes": ""
+    },
+    {
+      "id": "1723759200001",
+      "description": "Summer Job Payment",
+      "amount": 300.0,
+      "currency": "USD",
+      "type": "income",
+      "category": "Other",
+      "date": "2025-08-15",
+      "notes": "Final payment"
+    },
+    {
+      "id": "1728886800106",
+      "description": "Electricity Bill",
+      "amount": 15000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Utilities",
+      "date": "2025-10-05",
+      "notes": "Monthly electricity"
+    },
+    {
+      "id": "1728886800107",
+      "description": "Water Bill",
+      "amount": 8000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Utilities",
+      "date": "2025-10-06",
+      "notes": "Monthly water"
+    },
+    {
+      "id": "1728886800108",
+      "description": "Internet Bill",
+      "amount": 25000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Subscription",
+      "date": "2025-10-07",
+      "notes": "Canalbox"
+    },
+    {
+      "id": "1728886800109",
+      "description": "New T-shirt",
+      "amount": 15000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Shopping",
+      "date": "2025-10-08",
+      "notes": "From Mr. Price"
+    },
+    {
+      "id": "1728886800110",
+      "description": "Gift for friend",
+      "amount": 25.0,
+      "currency": "USD",
+      "type": "expense",
+      "category": "Shopping",
+      "date": "2025-10-09",
+      "notes": "Birthday gift"
+    },
+    {
+      "id": "1728886800111",
+      "description": "Pharmacy",
+      "amount": 7500.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Health",
+      "date": "2025-10-11",
+      "notes": "Painkillers"
+    },
+    {
+      "id": "1728886800112",
+      "description": "Mobile Data",
+      "amount": 3000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Utilities",
+      "date": "2025-10-13",
+      "notes": "MTN Weekly bundle"
+    },
+    {
+      "id": "1728886800113",
+      "description": "Dinner Out",
+      "amount": 7500.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Food",
+      "date": "2025-10-14",
+      "notes": "Local restaurant"
+    },
+    {
+      "id": "1728886800114",
+      "description": "Sent to family",
+      "amount": 75000.0,
+      "currency": "NGN",
+      "type": "expense",
+      "category": "Other",
+      "date": "2025-10-15",
+      "notes": ""
+    },
+    {
+      "id": "1728886800115",
+      "description": "Uber Ride",
+      "amount": 3200.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Transport",
+      "date": "2025-10-16",
+      "notes": "Late night"
+    },
+    {
+      "id": "1726266000005",
+      "description": "Monthly Groceries",
+      "amount": 120000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Groceries",
+      "date": "2025-09-02",
+      "notes": "Start of month stock up"
+    },
+    {
+      "id": "1726266000006",
+      "description": "Electricity Bill",
+      "amount": 14500.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Utilities",
+      "date": "2025-09-05",
+      "notes": "Sept electricity"
+    },
+    {
+      "id": "1726266000007",
+      "description": "Water Bill",
+      "amount": 7500.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Utilities",
+      "date": "2025-09-06",
+      "notes": "Sept water"
+    },
+    {
+      "id": "1726266000008",
+      "description": "Internet Bill",
+      "amount": 25000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Subscription",
+      "date": "2025-09-07",
+      "notes": ""
+    },
+    {
+      "id": "1726266000009",
+      "description": "Lunch Out",
+      "amount": 6000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Food",
+      "date": "2025-09-10",
+      "notes": ""
+    },
+    {
+      "id": "1726266000010",
+      "description": "Student Activity Fee",
+      "amount": 50.0,
+      "currency": "USD",
+      "type": "expense",
+      "category": "Fees",
+      "date": "2025-09-12",
+      "notes": ""
+    },
+    {
+      "id": "1726266000011",
+      "description": "Concert Ticket",
+      "amount": 20000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Entertainment",
+      "date": "2025-09-14",
+      "notes": ""
+    },
+    {
+      "id": "1726266000012",
+      "description": "Moto fare",
+      "amount": 500.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Transport",
+      "date": "2025-09-16",
+      "notes": ""
+    },
+    {
+      "id": "1726266000013",
+      "description": "New Jeans",
+      "amount": 50000.0,
+      "currency": "NGN",
+      "type": "expense",
+      "category": "Shopping",
+      "date": "2025-09-18",
+      "notes": ""
+    },
+    {
+      "id": "1726266000014",
+      "description": "Gym Membership",
+      "amount": 25.0,
+      "currency": "USD",
+      "type": "expense",
+      "category": "Health",
+      "date": "2025-09-20",
+      "notes": "Monthly fee"
+    },
+    {
+      "id": "1726266000015",
+      "description": "Weekly Groceries",
+      "amount": 35000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Groceries",
+      "date": "2025-09-22",
+      "notes": ""
+    },
+    {
+      "id": "1723759200002",
+      "description": "Monthly Salary",
+      "amount": 750000.0,
+      "currency": "RWF",
+      "type": "income",
+      "category": "Other",
+      "date": "2025-08-01",
+      "notes": "August pay"
+    },
+    {
+      "id": "1723759200003",
+      "description": "Electricity Bill",
+      "amount": 13000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Utilities",
+      "date": "2025-08-05",
+      "notes": "Aug electricity"
+    },
+    {
+      "id": "1723759200004",
+      "description": "Water Bill",
+      "amount": 8100.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Utilities",
+      "date": "2025-08-06",
+      "notes": "Aug water"
+    },
+    {
+      "id": "1723759200005",
+      "description": "Sold old textbook",
+      "amount": 20.0,
+      "currency": "USD",
+      "type": "income",
+      "category": "Other",
+      "date": "2025-08-10",
+      "notes": ""
+    },
+    {
+      "id": "1723759200006",
+      "description": "Snacks",
+      "amount": 35000.0,
+      "currency": "NGN",
+      "type": "expense",
+      "category": "Food",
+      "date": "2025-08-12",
+      "notes": "Stocking up"
+    },
+    {
+      "id": "1723759200007",
+      "description": "Doctor's Visit",
+      "amount": 15000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Health",
+      "date": "2025-08-20",
+      "notes": "Consultation"
+    },
+    {
+      "id": "1723759200008",
+      "description": "Bus Fare",
+      "amount": 1000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Transport",
+      "date": "2025-08-22",
+      "notes": ""
+    },
+    {
+      "id": "1723759200009",
+      "description": "Birthday Dinner",
+      "amount": 30000.0,
+      "currency": "RWF",
+      "type": "expense",
+      "category": "Food",
+      "date": "2025-08-25",
+      "notes": "Celebrating"
+    },
+    {
+      "id": "1721080800001",
+      "description": "Summer Job Payment",
+      "amount": 300.0,
+      "currency": "USD",
+      "type": "income",
+      "category": "Other",
+      "date": "2025-07-15",
+      "notes": "First payment"
+    }
+  ],
+  "categories": [
+    "Books",
+    "Entertainment",
+    "Fees",
+    "Food",
+    "Groceries",
+    "Health",
+    "Other",
+    "Shopping",
+    "Subscription",
+    "Transport",
+    "Utilities"
+  ],
+  "monthlyBudget": 500000.0,
+  "settings": {
+    "baseCurrency": "RWF"
+  },
+  "currentSort": {
+    "column": "date",
+    "direction": "desc"
+  }
+}
